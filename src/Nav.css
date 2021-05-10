@@ -4,3 +4,7 @@
 {
    display: none;
 }
+.Nav:active 
+{
+   color: white;
+}

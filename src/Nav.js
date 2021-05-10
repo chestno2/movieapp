@@ -3,8 +3,8 @@ import "./Nav.css"
 import requests from './requests'
 function Nav({setselectedOption}) {
     return (
-        <div  className="text-white md:flex md:justify-around    overflow-x-scroll flex Nav"  >
-              <div onClick={()=> setselectedOption(requests.fetchTopRated)} className="mx-4 opacity-50 hover:opacity-100 cursor-pointer " >TopRated</div>
+        <div  className="text-gray-200 md:flex md:justify-around    overflow-x-scroll flex Nav "  >
+              <div onClick={()=> setselectedOption(requests.fetchTopRated)} className="mx-4 opacity-50 hover:opacity-100 cursor-pointer  " >TopRated</div>
               <div onClick={()=> setselectedOption(requests.fetchActionMovies)} className="mx-4 opacity-50 hover:opacity-100 cursor-pointer">Action</div>
               <div onClick={()=> setselectedOption(requests.fetchComedyMovies)} className="mx-4 opacity-50 hover:opacity-100 cursor-pointer">Comedy</div>
               <div onClick={()=> setselectedOption(requests.fetchHorrorMovies)} className="mx-4 opacity-50 hover:opacity-100 cursor-pointer">Horror</div>
