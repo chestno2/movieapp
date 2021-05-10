@@ -1,24 +1,25 @@
+
 import React from 'react'
-
-function VideoCard() {
-
-   
-     useEffect(() => {
-        async function fetchData()
-        {
-            
-        }
-     }, [])
-
+import "./video.css"
+function VideoCard({movies}) {
+    const imgURL = `https://image.tmdb.org/t/p/w500/` 
     return (
         <div className=" ">
-            <div className="mt-4 mx-2">
-                <img className="  rounded-lg" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/08/02/916822-twitter-2.jpg"
+           
+           
+           <div className="mt-4 ml-1 text-gray-200 mx-2  " >
+                <img 
+                key = {movies.id}
+                 className="rounded-lg  w-96 lg:h-full  h-96   "  src={`${imgURL}${movies.poster_path}`}
                 alt="img"
                    />
-                   <div className='text-gray-300' > Zlatan Ibrahimovich</div>
-                   
+                 
+                   <p className="my-3 font-bold text-lg" >{movies.original_title}</p>
+                   <p className="truncate mt-2 " >  {movies.overview}</p>
+                   <p className="">{movies.release_date}</p>
             </div>
+            
+        
         </div>
     )
 }
